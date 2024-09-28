@@ -200,6 +200,19 @@ class Queue {
             count--;
         }
     }
+    int peek() {
+        if (count==0) {
+            cout << "Queue is empty"<<endl;
+            return -1;                 // Sentinel value as instructed in word file
+        }
+        return top->getData();
+    }
+
+    void clear() {
+        while(count!=0){
+            dequeue();               //dequeing untill the linked list ends
+        }
+    }
 
 
 };
